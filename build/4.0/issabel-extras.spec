@@ -9,10 +9,9 @@ Group:   Applications/System
 Source0: %{modname}_%{version}-%{release}.tgz
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildArch: noarch
-Requires(pre): issabel-framework >= 2.2.0-18
+Requires(pre): issabel-framework >= 4.0.0-1
 
 Obsoletes: elastix-extras
-Provides: elastix-extras
 
 %description
 Issabel Extras

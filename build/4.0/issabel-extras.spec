@@ -28,18 +28,18 @@ mv modules/                $RPM_BUILD_ROOT/var/www/html/
 
 # The following folder should contain all the data that is required by the installer,
 # that cannot be handled by RPM.
-mkdir -p                   $RPM_BUILD_ROOT/usr/share/elastix/module_installer/%{name}-%{version}-%{release}/
-mv setup/                  $RPM_BUILD_ROOT/usr/share/elastix/module_installer/%{name}-%{version}-%{release}/
-mv menu.xml                $RPM_BUILD_ROOT/usr/share/elastix/module_installer/%{name}-%{version}-%{release}/
+mkdir -p                   $RPM_BUILD_ROOT/usr/share/issabel/module_installer/%{name}-%{version}-%{release}/
+mv setup/                  $RPM_BUILD_ROOT/usr/share/issabel/module_installer/%{name}-%{version}-%{release}/
+mv menu.xml                $RPM_BUILD_ROOT/usr/share/issabel/module_installer/%{name}-%{version}-%{release}/
 
 %post
 
 # Run installer script to fix up ACLs and add module to Issabel menus.
-elastix-menumerge /usr/share/elastix/module_installer/%{name}-%{version}-%{release}/menu.xml
+issabel-menumerge /usr/share/issabel/module_installer/%{name}-%{version}-%{release}/menu.xml
 
 # The installer script expects to be in /tmp/new_module
 mkdir -p /tmp/new_module/%{modname}
-cp -r /usr/share/elastix/module_installer/%{name}-%{version}-%{release}/* /tmp/new_module/%{modname}/
+cp -r /usr/share/issabel/module_installer/%{name}-%{version}-%{release}/* /tmp/new_module/%{modname}/
 chown -R asterisk.asterisk /tmp/new_module/%{modname}
 
 php /tmp/new_module/%{modname}/setup/installer.php
@@ -52,12 +52,12 @@ rm -rf $RPM_BUILD_ROOT
 %preun
 if [ $1 -eq 0 ] ; then # Validation for desinstall this rpm
   echo "Delete Extras menus"
-  elastix-menuremove "%{modname}"
+  issabel-menuremove "%{modname}"
 fi
 
 %files
 %defattr(-, root, root)
 %{_localstatedir}/www/html/*
-/usr/share/elastix/module_installer/*
+/usr/share/issabel/module_installer/*
 
 %changelog

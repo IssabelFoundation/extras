@@ -23,5 +23,12 @@
                 <group id="1" name="administrator" desc="total access"></group>
             </permissions>
         </menuitem>
+        <menuitem menuid="meet"               desc="Issabel Meet"             parent="extras"            module="yes"  link="" order="1">
+            <permissions>
+                <group id="1" name="administrator" desc="total access"></group>
+                <group id="2" name="Operator" desc="Operator"></group>
+                <group id="3" name="extension" desc="extension user"></group>
+            </permissions>
+        </menuitem>
   </menulist>
 </module>

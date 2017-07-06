@@ -25,5 +25,12 @@ $arrLangModule=array(
 "Start"=>"Start",
 "Start new Video Conference"=>"Start new Video Conference",
 "Conference ID"=>"Conference ID",
+"MESSAGE"=>"Message",
+"Email Template Configuration"=>"Email Template Configuration",
+"Edit Email Template"=>"Edit Email Template",
+"Subject"=>"Subject",
+"Content"=>"Content",
+"Save"=>"Save",
+"Cancel"=>"Cancel",
 );
 ?>

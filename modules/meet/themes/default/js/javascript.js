@@ -23,7 +23,7 @@ $(document).ready(function (){
         };
         var api = new JitsiMeetExternalAPI(domain, room, width, height, htmlElement, configOverride, interfaceConfigOverride);
         api.executeCommand('displayName', username);
-        api.on("readyToClose",function() { console.log('ready to close'); window.location.href='index.php?menu=meet'; })
+        api.on("readyToClose",function() { window.location.href='index.php?menu=meet'; })
     }
 
 });

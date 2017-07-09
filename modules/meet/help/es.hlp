@@ -6,7 +6,7 @@
 <body>
 <h1>{$node_name}</h1>
 
-<p>La opción "Ping & Traceroute" del menú "Network" permite ejecutar estos comandos de red desde la interfaz web de Issabel.</p>
+<p>Issabel Meet le permite iniciar una video conferencia directamente desde su navegador</p>
 
 </body>
 </html>

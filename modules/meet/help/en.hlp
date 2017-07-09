@@ -6,7 +6,7 @@
 <body>
 <h1>{$node_name}</h1>
 
-<p>The option “Ping & Traceroute” in the “Network” menu lets you execute these network diagnosis commands from the Issabel GUI.</p>
+<p>Issabel Meet lets you start a video conference directly from your web browser</p>
 
 </body>
 </html>

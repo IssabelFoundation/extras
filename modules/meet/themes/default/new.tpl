@@ -1,3 +1,5 @@
+<script src="https://meet.jit.si/external_api.min.js"></script>
+
 {if $mb_message ne ''}
 <br/>
 {/if}

@@ -83,5 +83,5 @@
 </div>
 
 {else}
-<div id='meet' data-room='{$roomid}' data-username='{$username}'></div>
+<div id='meet' data-room='{$roomid}' data-username='{$username}' data-language='{$LANGUAGE}'></div>
 {/if}

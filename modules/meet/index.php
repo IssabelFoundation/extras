@@ -72,6 +72,9 @@ function _moduleContent(&$smarty, $module_name)
 
     $oForm = new paloForm($smarty, $arrFormElements);
 
+    $lang = get_language();
+    $smarty->assign("LANGUAGE",$lang);
+
     if(isset($_GET['edittemplate'])) {
         $smarty->assign("videomode","template");
     }

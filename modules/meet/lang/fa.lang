@@ -2,9 +2,11 @@
 /* vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4:
   Codificación: UTF-8
   +----------------------------------------------------------------------+
-  | Issabel Version 4.0.0                                                |
+  | Issabel version 4.0                                                  |
+  | http://www.issabel.org                                               |
   +----------------------------------------------------------------------+
-  | Copyright (c) 2017 Issabel Foundation                                |
+  | Copyright (c) 2019 Issabel Foundation                                |
+  | Copyright (c) 2006 Palosanto Solutions S. A.                         |
   +----------------------------------------------------------------------+
   | The contents of this file are subject to the General Public License  |
   | (GPL) Version 2 (the "License"); you may not use this file except in |
@@ -16,21 +18,26 @@
   | the License for the specific language governing rights and           |
   | limitations under the License.                                       |
   +----------------------------------------------------------------------+
+  | The Initial Developer of the Original Code is PaloSanto Solutions    |
+  | Translate by: Haamed Kouhfallah                                      |
+  | Email: k.haamed@gmail.com                                            |
+  +----------------------------------------------------------------------+
+  $Id: fa.lang,v 1.1 2019-11-30 04:08:50 Haamed Kouhfallah k.haamed@gmail.com Exp $
 */
 global $arrLangModule;
 $arrLangModule=array(
-"Send invitation emails to"=>"Send invitation emails to",
-"Join"=>"Join",
-"Join existing Video Conference"=>"Join existing Video Conference",
+"Send invitation emails to"=>"ارسال ایمیل دعوت به",
+"Join"=>"بپیوند",
+"Join existing Video Conference"=>"پیوستن به کنفرانس موجود",
 "Start"=>"Start",
-"Start new Video Conference"=>"Start new Video Conference",
-"Conference ID"=>"Conference ID",
-"MESSAGE"=>"Message",
-"Email Template Configuration"=>"Email Template Configuration",
-"Edit Email Template"=>"Edit Email Template",
-"Subject"=>"Subject",
-"Content"=>"Content",
-"Save"=>"Save",
-"Cancel"=>"Cancel",
+"Start new Video Conference"=>"شروع یک ویدئوکنفرانس جدید",
+"Conference ID"=>"شناسه کنفرانس",
+"MESSAGE"=>"پیام",
+"Email Template Configuration"=>"تنظیمات قالب ایمیل",
+"Edit Email Template"=>"ویرایش محتوای ایمیل",
+"Subject"=>"عنوان",
+"Content"=>"محتوا",
+"Save"=>"ذخیره",
+"Cancel"=>"انصراف",
 );
 ?>

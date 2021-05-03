@@ -1,7 +1,7 @@
 <table width="90%"  border="0" cellpadding="10" align="center">
   <tr>
     <td width="200" align="center"><img src="{$xlite_img}" align="center">&nbsp;</td>
-    <td><table class="tabForm" align="left" width="100%">
+    <td><table class="tabForm" align="left" width="99%">
           <tr>
             <td><b>X-Lite</b><br>
               {$xlite_software_description}<br>
@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td width="200" align="center"><img src="{$zoiper_img}" align="center" width="290" height="209">&nbsp;</td>
-    <td><table class="tabForm" align="left" width="100%">
+    <td><table class="tabForm" align="left" width="99%">
           <tr>
             <td><b>ZoIPer</b><br>
               {$zoiper_software_description}<br>

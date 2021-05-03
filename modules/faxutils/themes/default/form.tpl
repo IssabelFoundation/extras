@@ -1,7 +1,7 @@
 <table width="90%"  border="0" cellpadding="6" align="center">
   <tr>
     <td width="200" align="center"><img src="{$fax1_img}" align="center">&nbsp;</td>
-    <td><table class="tabForm" align="left" width="100%">
+    <td><table class="tabForm" align="left" width="99%">
           <tr>
             <td><b>JHylaFAX</b><br>
               {$fax1_software_description}<br>
@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td width="200" align="center"><img src="{$fax2_img}" align="center">&nbsp;</td>
-    <td><table class="tabForm" align="left" width="100%">
+    <td><table class="tabForm" align="left" width="99%">
           <tr>
             <td><b>Winprint HylaFAX</b><br>
               {$fax2_software_description}<br>

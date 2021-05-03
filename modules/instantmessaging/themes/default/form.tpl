@@ -1,7 +1,7 @@
 <table width="90%"  border="0" cellpadding="6" align="center">
   <tr>
     <td width="200" align="center"><img src="{$imess1_img}" align="center">&nbsp;</td>
-    <td><table class="tabForm" align="left" width="100%">
+    <td><table class="tabForm" align="left" width="99%">
           <tr>
             <td><b>Spark</b><br>
               {$imess1_software_description}<br/> 

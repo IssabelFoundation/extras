@@ -2,9 +2,10 @@
   /* vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4:
   Codificación: UTF-8
   +----------------------------------------------------------------------+
-  | Issabel version 2.4.0-9                                               |
+  | Issabel version 4.0                                                  |
   | http://www.issabel.org                                               |
   +----------------------------------------------------------------------+
+  | Copyright (c) 2021 Issabel Foundation                                |
   | Copyright (c) 2006 Palosanto Solutions S. A.                         |
   +----------------------------------------------------------------------+
   | The contents of this file are subject to the General Public License  |
@@ -19,12 +20,13 @@
   +----------------------------------------------------------------------+
   | The Initial Developer of the Original Code is PaloSanto Solutions    |
   +----------------------------------------------------------------------+
-  $Id: paloSantoInstant_Messaging.class.php,v 1.1 2013-08-12 10:08:04 Jose Briones jbriones@elastix.com Exp $ */
+  $Id: paloSantoInstant_Messaging.class.php, Thu 20 May 2021 08:11:15 AM EDT, nicolas@issabel.com
+*/
 class paloSantoInstant_Messaging{
     var $_DB;
     var $errMsg;
 
-    function paloSantoInstant_Messaging(&$pDB)
+    function __construct(&$pDB)
     {
         // Se recibe como parámetro una referencia a una conexión paloDB
         if (is_object($pDB)) {

@@ -2,9 +2,10 @@
   /* vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4:
   Codificación: UTF-8
   +----------------------------------------------------------------------+
-  | Issabel version 2.4.0-9                                               |
+  | Issabel version 4.0                                                  |
   | http://www.issabel.org                                               |
   +----------------------------------------------------------------------+
+  | Copyright (c) 2021 Issabel Foundation                                |
   | Copyright (c) 2006 Palosanto Solutions S. A.                         |
   +----------------------------------------------------------------------+
   | The contents of this file are subject to the General Public License  |
@@ -19,7 +20,8 @@
   +----------------------------------------------------------------------+
   | The Initial Developer of the Original Code is PaloSanto Solutions    |
   +----------------------------------------------------------------------+
-  $Id: index.php,v 1.1 2013-08-12 04:08:50 Jose Briones jbriones@elastix.com Exp $ */
+  $Id: index.php, Fri 17 Sep 2021 09:27:54 AM EDT, nicolas@issabel.com
+*/
 //include issabel framework
 include_once "libs/paloSantoGrid.class.php";
 include_once "libs/paloSantoForm.class.php";
@@ -56,16 +58,40 @@ function _moduleContent(&$smarty, $module_name)
 function viewFormSoftphones($smarty, $module_name, $local_templates_dir, $arrConf)
 {
     $smarty->assign("icon",  "modules/$module_name/images/softphones.png");
-    $smarty->assign("xlite_img",  "modules/$module_name/images/x-lite-4-lrg.png");
-    $smarty->assign("zoiper_img",  "modules/$module_name/images/zoiper.png");
     $smarty->assign("tag_manuf_description", _tr("Developer Description"));
     $smarty->assign("download_link", _tr("Download Link"));
     $smarty->assign("tag_manufacturer", _tr("Developer"));
 
-    $smarty->assign("xlite_software_description", _tr("xlite_software_description"));
-    $smarty->assign("xlite_manufacturer_description", _tr("xlite_manufacturer_description"));
-    $smarty->assign("zoiper_software_description", _tr("zoiper_software_description"));
-    $smarty->assign("zoiper_manufacturer_description", _tr("zoiper_manufacturer_description"));
+    $smarty->assign("arrData",array(
+         array(
+             "name"              => "X-Lite",
+             "img"               => "modules/$module_name/images/x-lite-4-lrg.png",
+             "description"       => _tr("xlite_software_description"),
+             "manufacturer"      => "CounterPath",
+             "manufacturer_desc" => _tr("xlite_manufacturer_description"),
+             "download_link"     => "http://www.counterpath.com/x-lite-download.html",
+             "manufacturer_link" => "https://www.counterpath.com"
+         ),
+         array(
+             "name"              => "Zoiper",
+             "img"               => "modules/$module_name/images/zoiper.png",
+             "description"       => _tr("zoiper_software_description"),
+             "manufacturer"      => "Zoiper",
+             "manufacturer_desc" => _tr("zoiper_manufacturer_description"),
+             "download_link"     => "http://www.zoiper.com/download_list.php?os=All",
+             "manufacturer_link" => "https://www.zoiper.com",
+        ),
+         array(
+             "name"              => "MicroSIP",
+             "img"               => "modules/$module_name/images/microsip-1.png",
+             "description"       => _tr("microsip_software_description"),
+             "manufacturer"      => "microsip",
+             "manufacturer_desc" => _tr("microsip_manufacturer_description"),
+             "download_link"     => "https://www.microsip.org/downloads",
+             "manufacturer_link" => "https://www.microsip.org",
+        ),
+    ));
+
 
     $oForm    = new paloForm($smarty,array());
     $content  = $oForm->fetchForm("$local_templates_dir/form.tpl",_tr("Softphones"), array());

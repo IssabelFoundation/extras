@@ -32,5 +32,7 @@ $arrLangModule=array(
 
 "zoiper_software_description" => "ZoIPer is a free softphone client for Windows, Linux and Mac OS X with SIP and IAX capabilities.",
 "zoiper_manufacturer_description" => "IAX and SIP multilanguage softphone is a VoIP soft client, meant to work with any IP-based communications systems and infrastructure.",
+"microsip_software_description" => "MicroSIP - open source portable SIP softphone based on PJSIP stack for Windows OS.",
+"microsip_manufacturer_description" => "It allowing to do high quality VoIP calls (person-to-person or on regular telephones) via open SIP protocol. From cloud of SIP providers you can choose best for you, register account and use it with MicroSIP. You'll get free person-to-person calls and cheap international calls."
 );
 ?>

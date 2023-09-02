@@ -101,7 +101,7 @@ function _moduleContent(&$smarty, $module_name)
                     $smarty->assign("mb_title",   _tr('Error').":");
                     $smarty->assign("mb_message", $pDB->errMsg);
                 } else {
-                    $smarty->assign("mb_title",   _tr('MESSAGE').":");
+                    $smarty->assign("mb_title",   _tr('Message').":");
                     $smarty->assign("mb_message", _tr("Successfuly updated!"));
                 }           
 

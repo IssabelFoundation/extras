@@ -2,16 +2,14 @@
 
 Summary: Issabel Extras
 Name: issabel-extras
-Version: 4.0.0
-Release: 4
+Version: 5.0.0
+Release: 1
 License: GPL
 Group:   Applications/System
 Source0: issabel-%{modname}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildArch: noarch
-Requires(pre): issabel-framework >= 4.0.0-1
-
-Obsoletes: elastix-extras
+Requires(pre): issabel-framework >= 5.0.0-1
 
 %description
 Issabel Extras

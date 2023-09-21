@@ -85,7 +85,7 @@
 
 <iframe
     allow="camera; microphone; display-capture; fullscreen; clipboard-read; clipboard-write; autoplay" 
-    src="https://issabel.video/{$roomid}
+    src="https://issabel.video/{$roomid}"
     style="height: 100vh; width: 100vw; border: 0px;" 
 ></iframe>
 

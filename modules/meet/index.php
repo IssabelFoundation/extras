@@ -35,11 +35,11 @@ function _moduleContent(&$smarty, $module_name)
     }
 
     // Create random room id for new conference 
-    $jitsi_room_id = "ISSABEL-".generateRandomString(20); 
+    $mirotalk_room_id = "ISSABEL-".generateRandomString(20); 
 
     // Smarty variables for template data
     $sNombreUsuario = leerNombreUsuario();
-    $smarty->assign("roomid",    $jitsi_room_id);
+    $smarty->assign("roomid",    $mirotalk_room_id);
     $smarty->assign("username",  $sNombreUsuario);
     $smarty->assign("videomode", "input");
 
@@ -86,12 +86,12 @@ function _moduleContent(&$smarty, $module_name)
         if(isset($_POST['action'])) {
             if($_POST['action']=='create') {
                 $emails = preg_split('/[\ \n\,]+/',$_POST['invite']);
-                invite_via_email($emails,$emailrow,$jitsi_room_id);
+                invite_via_email($emails,$emailrow,$mirotalk_room_id);
                 $smarty->assign("videomode", "video");
             } else if($_POST['action']=='join') {
                 $smarty->assign("videomode", "video");
-                $jitsi_room_id = $_POST['join'];
-                $smarty->assign("roomid", $jitsi_room_id);
+                $mirotalk_room_id = $_POST['join'];
+                $smarty->assign("roomid", $mirotalk_room_id);
             } else if($_POST['action']=='savetemplate') {
                 $query = "UPDATE emailconfig SET subject=?,content=? WHERE id=1";
                 $arrParam = array($_POST['emailsubject'],$_POST['emailcontent']);
@@ -101,7 +101,7 @@ function _moduleContent(&$smarty, $module_name)
                     $smarty->assign("mb_title",   _tr('Error').":");
                     $smarty->assign("mb_message", $pDB->errMsg);
                 } else {
-                    $smarty->assign("mb_title",   _tr('Message').":");
+                    $smarty->assign("mb_title",   _tr('MESSAGE').":");
                     $smarty->assign("mb_message", _tr("Successfuly updated!"));
                 }           
 
@@ -145,7 +145,7 @@ function invite_via_email($to,$emailrow,$roomid) {
     $msg   = $emailrow['content'];
     $sTema = $emailrow['subject'];
 
-    $link = "http://issabel.video/$roomid";
+    $link = "https://issabel.video/$roomid";
 
     // Variable substitution for mail body and subject
     $msg   = preg_replace("/{LINK}/",   $link,   $msg);

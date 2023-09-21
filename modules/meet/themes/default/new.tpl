@@ -1,5 +1,3 @@
-<script src="https://meet.jit.si/external_api.min.js"></script>
-
 {if $mb_message ne ''}
 <br/>
 {/if}
@@ -43,7 +41,7 @@
 </form>
 </div>
 </div>
-<div class='alert alert-neon text-right'>Powered by <a href='http://jitsi.org' rel='external'>Jitsi</a></div>
+<div class='alert alert-neon text-right'>Powered by <a href='https://sfu.mirotalk.com/' rel='external'>MiroTalk</a></div>
 {elseif $videomode eq 'template'}
 
 <div class='panel panel-neon'>
@@ -83,5 +81,13 @@
 </div>
 
 {else}
-<div id='meet' data-room='{$roomid}' data-username='{$username}' data-language='{$LANGUAGE}'></div>
+<div id='meet'>
+
+<iframe
+    allow="camera; microphone; display-capture; fullscreen; clipboard-read; clipboard-write; autoplay" 
+    src="https://issabel.video/{$roomid}
+    style="height: 100vh; width: 100vw; border: 0px;" 
+></iframe>
+
+</div>
 {/if}
